@@ -1,6 +1,5 @@
 package Linked_List;
 
-import java.util.*;
 class ListNode3 {
     int val;
     ListNode3 next;
