@@ -4,18 +4,18 @@ package Linked_List;
 Given the head of a linked list, return the list after sorting it in ascending order.
 */
 
-public class ListNode7 {
+public class sortList {
       int val;
-      ListNode7 next;
-      ListNode7() {}
-      ListNode7(int val) { this.val = val; }
-      ListNode7(int val, ListNode7 next) { this.val = val; this.next = next; }
+      sortList next;
+      sortList() {}
+      sortList(int val) { this.val = val; }
+      sortList(int val, sortList next) { this.val = val; this.next = next; }
   }
  
-class Solution {
-    public ListNode7 mergeTwoSortedLinkedList(ListNode7 list1, ListNode7 list2){
-        ListNode7 dummy=new ListNode7(-1,null);
-        ListNode7 temp=dummy;
+class Solution8 {
+    public sortList mergeTwoSortedLinkedList(sortList list1, sortList list2){
+        sortList dummy=new sortList(-1,null);
+        sortList temp=dummy;
         while(list1 !=null && list2 !=null){
             if(list1.val<=list2.val){
                 temp.next=list1;
@@ -35,26 +35,26 @@ class Solution {
         }
         return dummy.next;
     }
-    public ListNode7 findMiddle(ListNode7 head){
+    public sortList findMiddle(sortList head){
         if(head==null || head.next==null){
             return head;
         }
-        ListNode7 slow=head;
-        ListNode7 fast=head.next;
+        sortList slow=head;
+        sortList fast=head.next;
         while(fast!=null && fast.next!=null){
             slow=slow.next;
             fast=fast.next.next;
         }
         return slow;
     }
-    public ListNode7 sortList(ListNode7 head) {
+    public sortList sortList(sortList head) {
         if(head==null || head.next==null){
             return head;
         }
-        ListNode7 middle=findMiddle(head);
-        ListNode7 right=middle.next;
+        sortList middle=findMiddle(head);
+        sortList right=middle.next;
         middle.next=null;
-        ListNode7 left=head;
+        sortList left=head;
         left=sortList(left);
         right=sortList(right);
         return mergeTwoSortedLinkedList(left,right);
