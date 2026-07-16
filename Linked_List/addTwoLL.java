@@ -1,7 +1,7 @@
 package Linked_List;
 
 
-public class ListNode9 {
+class ListNode9 {
      int val;
      ListNode9 next;
      ListNode9() {}

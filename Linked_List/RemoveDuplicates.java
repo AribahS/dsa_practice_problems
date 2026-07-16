@@ -16,7 +16,7 @@ class Node12{
     }
 }
 class RemoveDuplicates{
-    public node12 removeDuplicates(Node12 head){
+    public Node12 removeDuplicates(Node12 head){
         if(head==null || head.next==null){
             return head;
         }
