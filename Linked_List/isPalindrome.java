@@ -1,38 +1,38 @@
 package Linked_List;
 
- public class isPalindrome {
+ class NodeC{
      int val;
-     isPalindrome next;
-      isPalindrome() {}
-      isPalindrome(int val) { this.val = val; }
-     isPalindrome(int val, isPalindrome next) { this.val = val; this.next = next; }
+     NodeC next;
+      NodeC() {}
+      NodeC(int val) { this.val = val; }
+     NodeC(int val, NodeC next) { this.val = val; this.next = next; }
  }
-class Solution3 {
-    public isPalindrome reverse(isPalindrome head){
-        isPalindrome prev=null;
-        isPalindrome curr=head;
+class isPalindrome {
+    public NodeC reverse(NodeC head){
+        NodeC prev=null;
+        NodeC curr=head;
         while(curr!=null){
-            isPalindrome front = curr.next;
+            NodeC front = curr.next;
             curr.next=prev;
             prev=curr;
             curr=front;
         }
         return prev;
     }
-    public boolean isPalindrome(isPalindrome head) {
+    public boolean isPalindrome(NodeC head) {
         if(head==null || head.next==null){
             return true;
         }
-        isPalindrome slow=head;
-        isPalindrome fast=head;
+        NodeC slow=head;
+        NodeC fast=head;
         while(fast.next!=null && fast.next.next!=null){
             fast=fast.next.next;
             slow=slow.next;
         }
-        isPalindrome secondHalf=reverse(slow.next);
+        NodeC secondHalf=reverse(slow.next);
 
-        isPalindrome first=head;
-        isPalindrome second=secondHalf;
+        NodeC first=head;
+        NodeC second=secondHalf;
         while(second!=null){
             if(first.val!=second.val){
                 slow.next=reverse(secondHalf);

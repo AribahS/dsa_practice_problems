@@ -8,22 +8,22 @@ Note that the relative order inside both the even and odd groups should remain a
 You must solve the problem in O(1) extra space complexity and O(n) time complexity.
 */
 
-public class oddEvenList {
+class NodeA {
      int val;
-     oddEvenList next;
-     oddEvenList() {}
-     oddEvenList(int val) { this.val = val; }
-     oddEvenList(int val, oddEvenList next) { this.val = val; this.next = next; }
+     NodeA next;
+     NodeA() {}
+     NodeA(int val) { this.val = val; }
+     NodeA(int val, NodeA next) { this.val = val; this.next = next; }
 }
-class Solution4 {
-    public oddEvenList oddEvenList(oddEvenList head) {
+class oddEvenList {
+    public NodeA oddEvenList(NodeA head) {
 
         if (head == null || head.next == null)
             return head;
 
-        oddEvenList odd = head;
-        oddEvenList even = head.next;
-        oddEvenList evenHead = even;
+        NodeA odd = head;
+        NodeA even = head.next;
+        NodeA evenHead = even;
 
         while (even != null && even.next != null) {
 

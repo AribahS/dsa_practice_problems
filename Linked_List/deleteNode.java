@@ -1,16 +1,16 @@
 package Linked_List;
 
-class ListNode {
+class ListNodeB {
     int val;
-    ListNode next;
-    ListNode(int val) {
+    ListNodeB next;
+    ListNodeB(int val) {
         this.val = val;
         this.next = null;
     }
 }
 
 public class deleteNode {
-    public void deleteNode(ListNode node) {
+    public void deleteNode(ListNodeB node) {
        node.val=node.next.val;
        node.next=node.next.next;
     }
