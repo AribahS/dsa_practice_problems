@@ -3,20 +3,20 @@ package Linked_List;
 19. Remove Nth Node From End of List
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
 */
-class ListNodeB {
+class ListNodeJ {
      int val;
-    ListNodeB next;
-     ListNodeB() {}
-     ListNodeB(int val) { this.val = val; }
-     ListNodeB(int val, ListNodeB next) { this.val = val; this.next = next; }
+    ListNodeJ next;
+     ListNodeJ() {}
+     ListNodeJ(int val) { this.val = val; }
+     ListNodeJ(int val, ListNodeJ next) { this.val = val; this.next = next; }
  }
 
-class SolutionB {
-    public ListNodeB removeNthFromEnd(ListNodeB head, int n) {
-        ListNodeB dummy=new ListNodeB(0);
+class SolutionJ {
+    public ListNodeJ removeNthFromEnd(ListNodeJ head, int n) {
+        ListNodeJ dummy=new ListNodeJ(0);
         dummy.next=head;
-        ListNodeB slow=dummy;
-        ListNodeB fast=dummy;
+        ListNodeJ slow=dummy;
+        ListNodeJ fast=dummy;
         for(int i=0;i<=n;i++){
             fast=fast.next;
         }
