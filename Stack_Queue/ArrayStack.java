@@ -1,4 +1,4 @@
-package Stack;
+package Stack_Queue;
 import java.util.*;
 /*
 Problem Statement: Implement a Last-In-First-Out (LIFO) stack using an array. 
