@@ -1,4 +1,9 @@
 package Stack_Queue;
+/*
+225. Implement Stack using Queues
+Implement a last-in-first-out (LIFO) stack using only two queues. 
+The implemented stack should support all the functions of a normal stack (push, top, pop, and empty).
+*/
 import java.util.Queue;
 import java.util.LinkedList;
 
@@ -32,11 +37,11 @@ class MyStack {
     public boolean empty() {
         return q1.isEmpty();
     }
-
+/*
 MyStack obj = new MyStack();
 obj.push(x);
 int param_2 = obj.pop();
 int param_3 = obj.top();
 boolean param_4 = obj.empty();
-
+*/
 }
