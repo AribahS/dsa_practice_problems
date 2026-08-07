@@ -5,16 +5,16 @@ Implement a Last-In-First-Out (LIFO) stack using a singly linked list.
 The implemented stack should support the following operations: push, pop, top, and isEmpty.
 */
 
-class Node{
+class NodeA{
     int val;
-    Node next;
-    Node(int d){
+    NodeA next;
+    NodeA(int d){
         val=d;
         next=null;
     }
 }
 class LinkedListStack {
-    private Node head;
+    private NodeA head;
     private int size;
     public LinkedListStack() {
         head=null;
@@ -22,7 +22,7 @@ class LinkedListStack {
     }
 
     public void push(int x) {
-       Node element = new Node(x);
+       NodeA element = new NodeA(x);
        element.next=head;
        head=element;
        size++;
@@ -33,7 +33,7 @@ class LinkedListStack {
         return -1;
       }
       int data= head.val;
-      Node temp=head;
+      NodeA temp=head;
       head=head.next;
       temp=null;
       size--;
