@@ -1,14 +1,14 @@
 package Linked_List;
-class ListNode3{
+class ListNode8{
     public int data;
-    public ListNode3 next;
-    ListNode3() { data = 0; next = null; }
-    ListNode3(int x) { data = x; next = null; }
-    ListNode3(int x, ListNode3 next) { data = x; this.next = next; }
+    public ListNode8 next;
+    ListNode8() { data = 0; next = null; }
+    ListNode8(int x) { data = x; next = null; }
+    ListNode8(int x, ListNode8 next) { data = x; this.next = next; }
 }
 public class InsertKthElement {
-    public ListNode3 insertAtKthPosition(ListNode3 head, int X, int K) {
-        ListNode3 dummy=new ListNode3(X);
+    public ListNode8 insertAtKthPosition(ListNode8 head, int X, int K) {
+        ListNode8 dummy=new ListNode8(X);
         if(head==null){
             head=dummy;
             return head;
@@ -18,7 +18,7 @@ public class InsertKthElement {
             head=dummy;
             return head;
         }
-        ListNode3 prev=head;
+        ListNode8 prev=head;
         int count=1;
         while(prev!=null && count<K-1){
             prev=prev.next;
